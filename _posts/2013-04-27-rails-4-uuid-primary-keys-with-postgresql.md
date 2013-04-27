@@ -15,4 +15,6 @@ Aaron recently added [uuid primary key support](https://github.com/rails/rails/c
 	  t.timestamps
 	end
 
+Rails now automatically sets the default value to `uuid_generate_v4()` for the primary_key.
+
 You'll of course need to run `CREATE EXTENSION "uuid-ossp";` in Postgres, either manually or with a migration via a `execute` statement.
