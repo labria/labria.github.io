@@ -8,7 +8,7 @@ tagline:
 {% for post in site.posts %}
 
    <!-- here add you post markup -->
-   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
    <p class="author">
     <span class="date">{{post.date}}</span>
   </p>

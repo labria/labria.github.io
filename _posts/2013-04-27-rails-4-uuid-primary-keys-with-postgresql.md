@@ -13,6 +13,6 @@ Aaron recently added [uuid primary key support](https://github.com/rails/rails/c
 	  t.primary_key :id 
 	  t.string :name
 	  t.timestamps
-	end		
+	end
 
 You'll of course need to run `CREATE EXTENSION "uuid-ossp";` in Postgres, either manually or with a migration via a `execute` statement.
