@@ -47,3 +47,9 @@ end
 The same goes for polymorphic relations.
 ## Schema dumping
 As Aaron mentioned on HN, ruby schema dumping does not work as expected yet (I noticed that it does not dump the :default for the primary key), you'll have to use SQL dumping for now.
+
+## Enabling the extension
+If your PostgreSQL user is a superuser, you can enable the extension right from a migration:
+{% highlight ruby %}
+enable_extension 'uuid-ossp'
+{% endhighlight %}
