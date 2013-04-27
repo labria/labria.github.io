@@ -35,6 +35,7 @@ create_table :users, id: false do |t|
 end
 {% endhighlight %}
 This will force the generated UUIDs to be sequential and preserve the sorting we're used to.
+By the way, switching to sequential UUIDs also positively affects DB performance.
 ## Relations
 Since UUID primary keys are per-table and not a global setting (there is a plugin in the works to make it global), Rails has no way to tell if the primary key of a table is a integer or a UUID. Because of this, `t.references :user` will still generate a integer `user_id` field, which will obviously not work. The solution is simple:
 {% highlight ruby %}
